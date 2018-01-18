@@ -1,7 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {ItemActionsService} from '../store/item-actions.service';
-import {Observable} from 'rxjs/Observable';
+import { ItemAction } from '../store/item.action';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +12,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   store$: any;
   items: any = [];
 
-  constructor(private itemAction: ItemActionsService, private store: Store<any>) {
+  constructor(private store: Store<any>, private itemAction: ItemAction) {
     this.store$ = this.store.select('items');
   }
 
@@ -22,7 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.store$.unsubscribe();
+    //this.store$.unsubscribe();
   }
 
 }

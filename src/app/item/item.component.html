@@ -1,0 +1,23 @@
+<div class="ui card">
+    <div class="image">
+      <img [src]="item.thumbnail">
+    </div>
+    <div class="content">
+      <a class="header">{{item.name}}</a>
+      <div class="meta">
+        <span class="date">{{item.price}}</span>
+      </div>
+      <!-- <div class="description">
+        Kristy is an art director living in New York.
+      </div> -->
+    </div>
+    <div class="extra content ">
+      <!-- <div class="fluid ui buttons">
+        <button class="ui button">-</button>
+        <div class="or"></div>
+        <button class="ui positive button active">+</button>
+      </div> -->
+      <div *ngIf="item.qty > 0" class="ui fluid basic green button">Add to cart</div>
+      <div *ngIf="item.qty <= 0" class="ui fluid disabled basic red button" dis>Out of stock</div>
+    </div>
+  </div>

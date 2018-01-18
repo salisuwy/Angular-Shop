@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ItemService {
 
-  BASE_URL = 'http://localhost:3000/items';
+  BASE_URL = 'http://localhost:3000/items?_limit=2';
 
   constructor(private http: HttpClient) { }
 

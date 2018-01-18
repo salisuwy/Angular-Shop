@@ -1,3 +1,14 @@
-<p *ngFor="let item of items">
-  {{ item.id }} - {{ item.name }} - {{ item.price }}
-</p>
+<div class="ui grid">
+  <div class="row">
+    <div class="four wide column">
+      <app-search-field></app-search-field>
+      <app-search-filter></app-search-filter>
+    </div>
+    <div class="twelve wide column">
+      <div class="three wide column" *ngFor="let item of items">
+        <app-item [item]="item"></app-item>
+      </div>
+      
+    </div>
+  </div>
+</div>

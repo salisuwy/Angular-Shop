@@ -1,7 +1,7 @@
-import itemsReducer from './items.reducer';
+import itemReducer from './item.reducer';
 
 const reducer = {
-  items: itemsReducer
+  items: itemReducer
 };
 
 export default reducer;
